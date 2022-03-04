@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>another new try!</title>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+           </script>
+</head>
+<body>
+    <h1>my first try</h1>
+    <p>my name is <strong>kuldeep chaturvedi</strong> i am trying to learn html</p>
+    <h2>my education</h2>
+    <hr>
+    <ol title="I">
+        <li>10<sup>th</sup>passed with 59% in mp board </li>
+        <li>12<sup>th</sup>passed with 59% in mp board</li>
+        <li>clear diploma with 74% in rgpv</li>
+    </ol>
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="beutiful image" width="500px" height="250px">
+    <hr>
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fnature%2F&psig=AOvVaw29jkXd609-9vTu_M1F86jZ&ust=1645197626271000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCID69PqEh_YCFQAAAAAdAAAAABAD">kuldeep</a>
+    <br>
+    <a href="file:///E:/all%20kuldeep%20document/Kuldeep%20Chaturvedi%20cv%2020.pdf">kk
+    </a>
+    <table>
+        <thead>
+        <tr>
+            <th>subject</th>
+            <th>first</th>
+            <th>second</th>
+            <th>third</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>math</td>
+                <td>50</td>
+                <td>66</td>
+                <td>77</td>
+            </tr>
+            <tr>   
+                <td>biology</td>
+                <td>75</td>
+                <td>99</td>
+                <td>66</td>
+            </tr>
+            <tr>
+                <td>chemestry</td>
+                <td>33</td>
+                <td>55</td>
+                <td>44</td>
+            </tr>
+            <tr>
+                <td>hindi</td>
+                <td>65</td>
+                <td>45</td>
+                <td>77</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th colspan="4">
+                total count
+            </th>
+        </tfoot>
+    </table>
+<video src=""></video>
+<div id="box" ondrop="drop(event)"
+   ondragover="allowDrop(event)"
+   style="border:1px solid black; 
+   width:200px; height:200px"></div>
+
+   <img id="image" src="sample.jpg" draggable="true"
+   ondragstart="drag(event)" width="150" height="50" alt="" />
+   <svg width="1000" height="250">
+   <rect width="150" height="150" fill="orange">
+    <animate attributeName="x" from="0" to="300"
+    dur="3s" fill="freeze" repeatcount="2"/>
+   </rect>
+   </svg>
+</body>
+</html>
